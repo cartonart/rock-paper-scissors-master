@@ -1,0 +1,31 @@
+$inner-circle-size: 110px;
+$circle-size: 150px;
+$inner-circle-box-shadow: inset 3px 6px rgba(0, 0, 0, 0.2);
+$circle-box-shadow: inset -3px -7px rgba(0, 0, 0, 0.2);
+
+.choice {
+  background: none;
+  border: none;
+  .circle {
+    width: $circle-size;
+    height: $circle-size;
+    box-shadow: $circle-box-shadow;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .inner-circle {
+    width: $inner-circle-size;
+    height: $inner-circle-size;
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: $inner-circle-box-shadow;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  color: white;
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 2px solid white;
+  text-align: left;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+
+  & > div:first-child {
+    font-size: 1.7rem;
+    line-height: 0.9;
+    font-weight: 700;
+  }
+
+  & > div:last-child {
+    background-color: white;
+    color: hsl(229, 64%, 46%);
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border-radius: 0.6rem;
+    div {
+      color: hsl(229, 25%, 31%);
+      font-size: 2.8rem;
+      line-height: 1;
+      font-weight: 700;
+    }
+  }
+}
