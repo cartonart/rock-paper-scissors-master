@@ -1,31 +1,52 @@
 $inner-circle-size: 110px;
 $circle-size: 150px;
-$inner-circle-box-shadow: inset 3px 6px rgba(0, 0, 0, 0.2);
-$circle-box-shadow: inset -3px -7px rgba(0, 0, 0, 0.2);
+$inner-circle-box-shadow: inset 0px 5px rgba(0, 0, 0, 0.2);
+$inner-circle-box-shadow-mobile: inset 0px 2px rgba(0, 0, 0, 0.2);
+$circle-box-shadow: inset 0 -5px rgba(0, 0, 0, 0.2);
+$circle-box-shadow-mobile: inset 0 -2px rgba(0, 0, 0, 0.2);
 
 .choice {
   background: none;
   border: none;
+  transform: translateY(-50%);
+  width: 100%;
   .circle {
-    width: $circle-size;
-    height: $circle-size;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
     box-shadow: $circle-box-shadow;
-    display: flex;
-    justify-content: center;
     border-radius: 50%;
-    align-items: center;
     margin: 0 auto;
     cursor: pointer;
+    transition: 200ms linear;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
+
   .inner-circle {
-    width: $inner-circle-size;
-    height: $inner-circle-size;
+    width: 70%;
     background-color: white;
     border: 1px solid white;
     box-shadow: $inner-circle-box-shadow;
-    display: flex;
-    justify-content: center;
     border-radius: 50%;
-    align-items: center;
+    position: absolute;
+    padding-top: 70%;
+    top: 14%;
+    left: 14%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .choice {
+    .circle {
+      box-shadow: $circle-box-shadow-mobile;
+      .inner-circle {
+        box-shadow: $inner-circle-box-shadow-mobile;
+      }
+    }
   }
 }

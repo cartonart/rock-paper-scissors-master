@@ -1,15 +1,16 @@
-import "./Choice.scss"
+import "./Choice.scss";
 
-const Choice = ({choice,onClick}) => {
-    console.log({choice})
-    return <button className="choice"
-    onClick={onClick} >
-        <div class="circle" style={{backgroundColor:choice.color}}>
-            <div class="inner-circle">
-                <img src={choice.image}/>
-            </div>
-        </div>
+const Choice = ({ choice, onClick }) => {
+  return (
+    <button className="choice" onClick={onClick}>
+      <div className="circle" style={{ backgroundColor: choice.color }}>
+        <div
+          className="inner-circle"
+          style={{ backgroundImage: `url(${choice.image})` }}
+        ></div>
+      </div>
     </button>
-}
+  );
+};
 
-export default Choice
+export default Choice;

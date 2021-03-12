@@ -1,12 +1,15 @@
+body{
+  background: #1B2A4B;
+}
+
 .App {
   text-align: center;
-  background: rgb(31,55,86);
-  background: radial-gradient(circle, rgba(31,55,86,1) 0%, rgba(0,0,0,1) 100%);
   width: 100vw;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 3.5rem;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   gap: 2rem;
 }
 
@@ -42,5 +45,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:500px){
+  .App{
+    padding: 1.8rem;
   }
 }
