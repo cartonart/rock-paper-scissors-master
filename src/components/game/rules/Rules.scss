@@ -1,3 +1,7 @@
+.ReactModal__Overlay {
+  z-index: 2;
+}
+
 .rules-modal {
   font-family: inherit;
   display: flex;
@@ -30,6 +34,7 @@
 
 .rules-container {
   align-self: flex-end;
+  z-index: 2;
   .rules-btn {
     background: transparent;
     color: white;
